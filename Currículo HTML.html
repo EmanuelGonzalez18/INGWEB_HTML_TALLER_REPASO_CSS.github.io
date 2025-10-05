@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/encabezado.css">
+    <link rel="stylesheet" href="estilos/estiloDesktop.css">
+    <link rel="stylesheet" href="estilos/piedepagina.css">
+    <title>Currículo HTML -  Edward Camaño & Emanuel González</title>
+</head>
+<body>
+    <header>
+        <h1>Formulario</h1>
+        <nav>
+        <a href="index.html">Inicio</a> |
+        <a href="MiBiografía(home).html#SobreMi">Sobre mí</a> |
+        <a href="MiBiografía(home).html#Libros">Mis libros favoritos</a> |
+        <a href="MiBiografía(home).html#Peliculas">Mis películas favoritas</a> |
+        <a href="MiBiografía(home).html#Canciones">Canciones favoritas</a> |
+        <a href="MiBiografía(home).html#Multimedia">Multimedia</a> |      
+        <a href="Currículo HTML.html">Datos Personales</a> | 
+        <a href="Tema.html">Deportes</a>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section>
+            <h2>Datos Generales</h2>
+        <div class="cuadro-formulario">
+        <form action="#" method="post" class="formulario-dos-columnas">
+        <div class="columna">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="cedula">Cédula:</label>
+        <input type="text" id="cedula" name="cedula" required>
+
+        <label for="fecha">Fecha de nacimiento:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required>
+
+        <label for="provincia">Provincia:</label>
+        <input type="text" id="provincia" name="provincia" required>
+        </div>
+
+        <div class="columna">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+
+
+        <label for="corregimiento">Corregimiento:</label>
+        <input type="text" id="corregimiento" name="corregimiento" required>
+
+        <label for="pais">País:</label>
+        <input type="text" id="pais" name="pais" required>
+
+        <label>Sexo:</label>
+        <div class="sexo">
+          <input type="radio" id="masculino" name="sexo" value="masculino" required>
+          <label for="masculino">Masculino</label>
+          <input type="radio" id="femenino" name="sexo" value="femenino">
+          <label for="femenino">Femenino</label>
+        </div>
+      </div>
+
+      <div class="botones">
+        <button type="reset">Limpiar</button>
+        <button type="submit">Enviar</button>
+      </div>
+            </form>
+        </div>
+        </section>
+    </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <hr>
+    <p>&copy; 2025 - Edward Camaño & Emanuel González - Ingeniería WEB</p>
+  </footer>
+</body>
+</html>
