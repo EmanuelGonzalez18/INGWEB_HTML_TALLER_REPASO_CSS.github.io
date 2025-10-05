@@ -1,0 +1,23 @@
+/* ----- piedepagina.css ----- */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra horizontalmente */
+  justify-content: center; /* centra verticalmente si hay altura */
+  background-color: #004080;
+  color: white;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+
+footer hr {
+  border: 1px solid #ffcc00;
+  width: 60%;
+  margin: 10px auto;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.95em;
+}

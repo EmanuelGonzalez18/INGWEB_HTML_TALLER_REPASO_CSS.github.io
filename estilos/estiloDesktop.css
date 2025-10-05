@@ -1,0 +1,472 @@
+/* ----- estiloDesktop.css ----- */
+
+/* Estructura general */
+body, html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  height: 100%;              /* asegura que el body ocupe toda la ventana */
+  margin: 0;                 /* elimina márgenes por defecto */
+  display: flex;             /* activa el modelo flexbox */
+  flex-direction: column;    /* organiza los elementos en columna */
+}
+
+main {
+  max-width: 1000px;
+  margin: 30px auto;
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  flex: 1;
+}
+
+/* Encabezados */
+h1, h2, h3, h4 {
+  color: #004080;
+}
+
+h2 {
+  border-bottom: 2px solid #004080;
+  padding-bottom: 5px;
+  margin-top: 10px;
+}
+
+/* Texto y párrafos */
+p {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* Listas */
+ul, ol {
+  margin-left: 25px;
+  line-height: 1.6;
+}
+
+/* Imágenes */
+img {
+  display: block;
+  margin: 10px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Formularios */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+  color: #004080;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+button {
+  background-color: #004080;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0066cc;
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #004080;
+  color: white;
+}
+
+/* Videos, audios e iframes */
+iframe, video, audio {
+  display: block;
+  margin: 15px auto;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Layout centrado (una columna) */
+main section {
+  margin-bottom: 30px;
+}
+
+/* Links generales */
+a {
+  color: #004080;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff6600;
+  text-decoration: underline;
+}
+
+/* Diseño adaptable */
+@media (max-width: 768px) {
+  main {
+    width: 90%;
+    padding: 15px;
+  }
+
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+}
+
+/* ----- Biografía: dos columnas ----- */
+.biografia-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.biografia {
+  flex: 1;
+  background-color: #f8f9fb;
+  border: 2px solid #004080;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ----- Carruseles (libros y películas) ----- */
+.carrusel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+  padding: 10px 0;
+}
+
+.carrusel::-webkit-scrollbar {
+  height: 10px;
+}
+
+.carrusel::-webkit-scrollbar-thumb {
+  background-color: #004080;
+  border-radius: 5px;
+}
+
+.libro, .pelicula {
+  flex: 0 0 300px;
+  background-color: #fefefe;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  scroll-snap-align: start;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.libro img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* ==== Canciones: caja exterior ==== */
+.caja-exterior {
+  border: 3px solid #004080;     /* Borde azul oscuro */
+  border-radius: 12px;           /* Bordes redondeados */
+  padding: 20px;                 /* Espacio interno */
+  background-color: #ffffff;     /* Fondo blanco */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+.caja-exterior h3 {
+  color: #004080;
+  text-align: center;
+}
+
+.caja-exterior table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px auto;
+}
+
+.caja-exterior th {
+  background-color: #004080;
+  color: white;
+  padding: 8px;
+}
+
+.caja-exterior td {
+  text-align: center;
+}
+
+
+/* ----- Multimedia: dos columnas ----- */
+.multimedia-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.multimedia-container .columna {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+  border: 2px solid #004080;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ==== Carrusel horizontal de libros ==== */
+.carrusel-libros {
+  display: flex;
+  overflow-x: auto;           /* Activa desplazamiento horizontal */
+  scroll-snap-type: x mandatory; /* Hace que el scroll se detenga en cada tarjeta */
+  gap: 20px;                  /* Espacio entre tarjetas */
+  padding: 20px 10px;
+  scroll-behavior: smooth;    /* Desplazamiento suave */
+}
+
+.carrusel-libros::-webkit-scrollbar {
+  height: 10px;               /* Tamaño de la barra */
+}
+
+.carrusel-libros::-webkit-scrollbar-thumb {
+  background-color: #004080;  /* Color de la barra */
+  border-radius: 5px;
+}
+
+.libro {
+  flex: 0 0 320px;            /* Cada tarjeta tiene ancho fijo */
+  scroll-snap-align: start;   /* Cada tarjeta se alinea al inicio al hacer scroll */
+  background-color: #f9f9f9;
+  border: 2px solid #004080;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  padding: 15px;
+  text-align: center;
+}
+
+.libro img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.libro h3 {
+  color: #004080;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.libro p {
+  font-size: 14px;
+  text-align: justify;
+}
+
+/* ==== Carrusel horizontal de películas ==== */
+.carrusel-peliculas {
+  display: flex;
+  overflow-x: auto;               /* Activa desplazamiento horizontal */
+  scroll-snap-type: x mandatory;  /* Detiene el scroll en cada película */
+  gap: 20px;
+  padding: 20px 10px;
+  scroll-behavior: smooth;        /* Scroll suave */
+}
+
+.carrusel-peliculas::-webkit-scrollbar {
+  height: 10px;
+}
+
+.carrusel-peliculas::-webkit-scrollbar-thumb {
+  background-color: #004080;
+  border-radius: 5px;
+}
+
+.pelicula {
+  flex: 0 0 320px;                /* Tamaño fijo para cada tarjeta */
+  scroll-snap-align: start;       /* Cada tarjeta se alinea automáticamente */
+  background-color: #f9f9f9;
+  border: 2px solid #004080;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  padding: 15px;
+  text-align: center;
+}
+
+.pelicula iframe {
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.pelicula h3 {
+  color: #004080;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.pelicula p {
+  font-size: 14px;
+  text-align: justify;
+}
+
+/* ==== Distribución de las noticias de deportes ==== */
+.deportes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* dos columnas iguales */
+  gap: 30px;                             /* espacio entre columnas y filas */
+  justify-content: center;               /* centra el contenido general */
+}
+
+/* Centrar la última noticia (la quinta) */
+.deportes .ultimo {
+  grid-column: 1 / -1;   /* hace que ocupe todo el ancho (las 2 columnas) */
+  justify-self: center;  /* centra la caja dentro del grid */
+  width: 60%;            /* puedes ajustar el ancho del bloque centrado */
+}
+
+/* ==== Distribución de las noticias de deportes ==== */
+main.deportes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* dos columnas iguales */
+  gap: 30px;                             /* espacio entre los cuadros */
+  justify-content: center;               /* centra el conjunto */
+}
+
+/* ==== Cuadro de cada noticia ==== */
+main.deportes section {
+  background-color: #ffffff;           /* fondo blanco */
+  border: 2px solid #004080;           /* borde azul oscuro */
+  border-radius: 12px;                 /* bordes redondeados */
+  padding: 20px;                       /* espacio interno */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* sombra suave */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* ==== Centrar la última noticia ==== */
+main.deportes section:last-child {
+  grid-column: 1 / -1;   /* ocupa ambas columnas */
+  justify-self: center;  /* centra el bloque dentro del grid */
+  width: 60%;            /* ajusta el ancho del cuadro centrado */
+}
+
+/* ==== Ajuste para pantallas pequeñas ==== */
+@media (max-width: 768px) {
+  main.deportes {
+    grid-template-columns: 1fr; /* una sola columna */
+  }
+
+  main.deportes section:last-child {
+    width: 100%; /* el cuadro final ocupa todo el ancho */
+  }
+}
+
+.intro {
+  background-color: #ffffff;
+  border: 2px solid #004080;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+}
+
+/* ==== Formulario en dos columnas ==== */
+.formulario-dos-columnas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* dos columnas iguales */
+  gap: 25px 40px;                 /* espacio entre columnas y filas */
+  align-items: start;
+}
+
+.formulario-dos-columnas .columna {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formulario-dos-columnas label {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.formulario-dos-columnas input[type="text"],
+.formulario-dos-columnas input[type="tel"],
+.formulario-dos-columnas input[type="date"] {
+  width: 100%;
+}
+
+.formulario-dos-columnas .sexo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ==== Botones ==== */
+.botones {
+  grid-column: 1 / -1; /* que ocupe ambas columnas */
+  display: flex;
+  justify-content: space-between; /* uno a la izq, otro a la der */
+  margin-top: 20px;
+}
+
+.botones button {
+  width: 48%;
+  padding: 12px;
+  font-size: 1em;
+}
+
+/* ==== Adaptación para pantallas pequeñas ==== */
+@media (max-width: 768px) {
+  .formulario-dos-columnas {
+    grid-template-columns: 1fr; /* una sola columna */
+  }
+
+  .botones {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .botones button {
+    width: 100%;
+  }
+}
+
+.cuadro-formulario {
+  max-width: 1100px;   /* más ancho solo aquí */
+  margin: 0 auto;
+  padding: 30px;
+  background-color: white;
+  border: 2px solid #004080;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}

@@ -1,0 +1,38 @@
+/* ----- encabezado.css ----- */
+header {
+  background-color: #004080; /* azul principal */
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+  border-bottom: 4px solid #ffcc00; /* línea amarilla decorativa */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2em;
+  letter-spacing: 1px;
+}
+
+nav {
+   position: fixed;   /* hace que el nav quede fijo */
+  top: 0;            /* lo pega a la parte superior */
+  left: 0;           /* se alinea al borde izquierdo */
+  width: 100%;       /* ocupa todo el ancho */
+  background-color: #004080;  /* color de fondo */
+  color: white;
+  padding: 10px 20px;
+  z-index: 1000;   
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffcc00;
+  text-decoration: underline;
+}
